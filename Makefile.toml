@@ -1,0 +1,3 @@
+[tasks.ping]
+command = "echo"
+args = ["pong"]
