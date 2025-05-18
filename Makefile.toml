@@ -119,3 +119,6 @@ script = [
     "rm ${STRIP}",
 ]
 dependencies = ["elf"]
+
+[tasks.kernel]
+env = { RUSTFLAGS = "${RUSTFLAGS} -Clink-arg=-T${DEVKITPRO}/wums/share/libkernel.ld" }
