@@ -1,3 +1,2 @@
-[tasks.ping]
-command = "echo"
-args = ["pong"]
+[env]
+WUT_PATH = { script = [ """ cargo metadata --format-version 1 | jq '.packages[] | select(.name == "wut") | .manifest_path' | xargs dirname """ ] }
